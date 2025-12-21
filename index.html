@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duong's assignments
+    </title>
+    <style>
+        li a {
+            display: flex;          /* Chuyển sang Flexbox để căn giữa chữ */
+            align-items: center;    /* Căn giữa theo chiều dọc */
+            justify-content: center;/* Căn giữa theo chiều ngang */
+            height: 100px;          /* Chiều cao ô (ví dụ 100px) */
+            text-decoration: none;
+            font-size: 24px;
+            background-color: rgb(231, 181, 161);
+            color: rgb(63, 109, 10);
+            border: 1px solid rgb(186, 149, 149);
+            border-radius: 20px;
+            transition: 0.3s;       /* Hiệu ứng mượt khi hover */
+        }
+        li a:hover {
+            background-color: darkgreen;
+            color: white;
+        }
+        h1 {
+            text-align: center;
+            color: darkblue;
+        }
+        ul{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            list-style-type: none;
+            justify-content: space-between;
+            padding: 0; /* Xóa khoảng trống mặc định của ul */
+            gap: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Assignments</h1>
+    <div>
+        <ul>
+            <li><a href="Day1/index.html">Day 1</a></li>
+            <li><a href="Day2/index.html">Day 2</a></li>
+            <li><a href="Day3/index.html">Day 3</a></li>
+            <li><a href="Day4/index.html">Day 4</a></li>
+        </ul>
+    </div>
+    
+</body>
+</html>
