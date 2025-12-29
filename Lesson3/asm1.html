@@ -3,9 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/ex01Lesson3.css">
+    <title>Form sign up</title>
 </head>
 <body>
+
+    <div class="container__form">
+
+        <h2><strong>Try a free sample</strong></h2>
+        <p>Sign up to get a coupon you can redeem at your nearest Dancing 
+            Goat cafe for a sample of the Colombia Carlos Imbachi coffee. 
+            We'll also make sure you don't miss out on news introducing the 
+            new coffees that we add to our store regularly.</p>
+
+        <div class="block_modified row">
+
+            <div class="block__left col-md-6">
+
+                <label for="firstname">First name</label>
+                <input type="text" name="firstname" placeholder="John">
+
+                <label for="email">Email address</label>
+                <input type="email" name="email" placeholder="john@example.com">
+
+                <label for="city">City</label>
+                <input type="text" name="city" placeholder="London">
+
+                <label for="zipcode">Zipcode</label>
+                <input type="text" name="zip" placeholder="EC2Y8DS">
+
+            </div>
+            
+            <div class="block__right col-md-6">
+                <label for="lastname">Last name</label>
+                <input type="text" name="lastname" placeholder="Smith">
+                <label for="address">Address</label>
+                <input type="text" name="address" placeholder="Silk St">
+                <label for="state">State (optional)</label>
+                <input type="text" name="state">
+                <label for="country">Country</label>
+                <input type="text" placeholder="United Kingdom">  
+            </div>           
+        </div>
+
+        <button><strong>SEND ME FREE COFFEE</strong></button> 
+
+    </div>
     
 </body>
 </html>

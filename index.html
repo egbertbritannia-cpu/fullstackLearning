@@ -5,80 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" 
             rel="stylesheet">
+    <link rel="stylesheet" href="css/styleindex.css">
     <title>Duong's assignments</title>
-    <style>  
-        :root {
-            /* Khai báo biến toàn cục */
-            --color-grasslands: #5F5420;
-            --color-bluebell:   #A1A8BE;
-            --color-cream:      #F3D0C3;
-            --color-lilac:      #EDBEE4;
-            --color-terra:      #EA785B;
-            --color-grape:      #3F0013;
-        }
-
-        body {
-            font-family: 'Playfair Display', serif;
-            background-color: var(--color-grasslands);
-        }
-
-        li a {
-            display: flex;         
-            align-items: center;    /* Căn giữa theo chiều dọc */
-            justify-content: center;
-                    
-            text-decoration: none;
-            font-size: 170%;
-            height: 100px; 
-
-            background-color: var(--color-grasslands);
-            color: var(--color-cream);
-            border: 0px solid rgb(186, 149, 149);
-            border-radius: 15px;
-            transition: 0.3s;    
-            box-shadow: 0 5px 20px -5px #665b23; 
-        }
-
-        li a:hover {
-            background-color: var(--color-terra);
-            color: var(--color-cream);
-        }
-
-        h1 {
-            text-align: center;
-            font-size: 50px;
-            color: var(--color-cream);
-            margin-bottom: 50px;
-        }
-
-        ul{
-            display: grid;
-            grid-template-columns: repeat(4, 22%);
-            list-style-type: none;
-            justify-content: center;
-            padding: 0; /* Xóa khoảng trống mặc định của ul */
-            gap: 30px;            
-        }
-
-        .container {
-            background-color: var(--color-cream);
-            box-shadow: 0 10px 30px -5px rgba(50, 0, 15, 0.2); 
-            border-radius: 10px;
-            width: 73%;
-            margin: 10px auto;
-            padding: 20px;
-        }
-
-    </style>
+    
 </head>
 <body>
     <h1>Assignments</h1>
     <div class="container">
         <ul>
-            <li><a href="Lesson1/index.html">Lesson 1</a></li>
-            <li><a href="Lesson2/index.html">Lesson 2</a></li>
-            <li><a href="Lesson3/index.html">Lesson 3</a></li>
-            <li><a href="Lesson4/index.html">Lesson 4</a></li>
+            <li>
+                <a href="#">Lesson 1</a>
+                <div>
+                    <ul>
+                        <li><a href="Lesson1/asm1.html">assignment 1</a></li>
+                        <li><a href="Lesson1/asm2.html">assignment 2</a></li>
+                        <li><a href="Lesson1/asm3.html">assignment 3</a></li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                <a href="#">Lesson 2</a>
+                <div>
+                    <ul>
+                        <li><a href="Lesson2/asm1.html">assignment 1</a></li>
+                        <li><a href="Lesson2/asm2.html">assignment 2</a></li>
+                        <li><a href="Lesson2/asm3.html">assignment 3</a></li>
+                        <li><a href="Lesson2/asm4.html">assignment 4</a></li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                <a href="#">Lesson 3</a>
+                <div>
+                    <ul>
+                        <li><a href="Lesson3/asm1.html">assignment 1</a></li>
+                        <li><a href="Lesson3/asm2.html">assignment 2</a></li>
+                        <li><a href="Lesson3/asm3.html">assignment 3</a></li>
+                        <li><a href="Lesson3/asm4.html">assignment 4</a></li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                <a href="#">Lesson 4</a>
+                <div>
+                    <ul>
+                        <li><a href="Lesson4/asm1.html">assignment 1</a></li>
+                        <li><a href="Lesson4/asm2.html">assignment 2</a></li>
+                        <li><a href="Lesson4/asm3.html">assignment 3</a></li>
+                        <li><a href="Lesson4/asm4.html">assignment 4</a></li>
+                    </ul>
+                </div>
+            </li>
+
+
         </ul>
     </div>
 </body>

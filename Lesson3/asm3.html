@@ -4,8 +4,91 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        div {
+            margin-bottom: 15px;
+        }
+        label {
+            display: inline-block;
+            width: 150px;
+        }
+        input[type="text"],
+        input[type="password"],
+        select {
+            width: 200px;
+            padding: 5px;
+        }
+        button {
+            padding: 10px 15px;
+            margin-right: 10px;
+        }
+    </style>
 </head>
 <body>
-    
+    <table>
+        <tbody>
+            <tr> 
+                <td><label>Username:</label></td>
+                <td>
+                    <input type="text" name="username" placeholder="Enter your username">
+                </td>
+            </tr>
+            <tr>
+                <td><label>Password:</label></td>
+                <td>
+                    <input type="password" name="password" placeholder="Enter your password">
+                </td>
+            </tr>
+            <tr> 
+                <td>
+                    <label>City of Employment:</label>
+                </td>
+                <td><input type="text" name="city" placeholder="Enter your city"></td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Web server:</label>
+                </td>
+                <td>
+                    <select name="server" aria-placeholder="— Choose a server —">
+                        <option>Server 1</option>
+                        <option>Server 2</option>
+                        <option>Server 3</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="text">Please specify your role:</label></td>
+                <td>
+                    <label for="">
+                        <input type="radio" name="role" value="admin"> "Admin" <br>
+                        <input type="radio" name="role" value="engineer"> "Engineer" <br>
+                        <input type="radio" name="role" value="manager"> "Manager" <br>
+                        <input type="radio" name="role" value="guest"> "Guest" <br>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="text">Single Sign-on to the following:</label></td>
+                <td>
+                    <label for="">
+                        <input type="checkbox" name="mail" value="mail"> "Mail" <br>
+                        <input type="checkbox" name="payroll" value="payroll"> "Payroll" <br>
+                        <input type="checkbox" name="self-service" value="self-service"> "Self-service" <br>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button type="submit">Login</button>
+                    <button type="reset">Reset</button>
+                </td>
+        </tbody>
+    </table>    
 </body>
 </html>
