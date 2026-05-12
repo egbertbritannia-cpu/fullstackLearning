@@ -16,28 +16,27 @@ function handleIntersection(){
     const array1 = getInputValue('intersection-a1');
     const array2 = getInputValue('intersection-a2');
     const result = setIntersection(array1, array2);
-    renderResult(result, 'output-intersection');
+    displayResult(result, 'output-intersection');
 }
 
 function handleFlatten(){
     const input = getInputValue('flatten-input');
     const result = flattenArray(input);
-    renderResult(result, 'output-flatten');
+    displayResult(result, 'output-flatten');
 }
 
-function handleConcat(){ 
-    const array1 = getInputValue('concat-a1');
-    const array2 = getInputValue('concat-a2');
-    const result = concatArray(array1, array2);
-    renderResult(result, 'output-concat');
+function handleGroupByType(){ 
+    const array = getInputValue('concat-a1');
+    const result = groupByType(array);
+    displayResult(result, 'output-concat');
 }
 
 //render
-function renderResult(output, id){
+function displayResult(output, id){
         document.getElementById(id).textContent = `${output}`;
 }
 
-function arrayHelper(input){
+function parseArrayString(input){
     if(!input.trim()) return "Please enter data";
     let arr = input.split(","); 
     arr = arr.map(item => item.trim());
@@ -45,7 +44,7 @@ function arrayHelper(input){
     return arr;
 }
 
-function parseInput(input){
+function parseJSONInput(input){
     if(!input.trim()) return "Please enter data";
     try {
         return JSON.parse(input);
@@ -62,8 +61,8 @@ function parseInput(input){
     Kết quả [1,2]
 */
 function setIntersection(array1, array2){
-    const arr1 = arrayHelper(array1);
-    const arr2 = arrayHelper(array2);
+    const arr1 = parseArrayString(array1);
+    const arr2 = parseArrayString(array2);
     let arr = arr1.filter(x => arr2.includes(x));   
     return arr;
 }
@@ -75,12 +74,12 @@ var arr = [0, 1, [2, 3], [4, 5, [6, 7]], [8, [9, 10, [11, 12]]]];
 Kết quả
 [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
 */
-function handleFlattenRecursive(arr){
+function deepFlatten(arr){
     let result = [];
 
     arr.forEach(item => {
         if(Array.isArray(item)){
-            result = result.concat(handleFlattenRecursive(item));
+            result = result.concat(deepFlatten(item));
         } else {
             result.push(item);
         }
@@ -90,10 +89,10 @@ function handleFlattenRecursive(arr){
 }
 
 function flattenArray(input){
-    const arr = parseInput(input); 
+    const arr = parseJSONInput(input); 
     
     if(Array.isArray(arr)){
-            return handleFlattenRecursive(arr).join(', ');
+            return deepFlatten(arr).join(', ');
         } else {
             return 'error: array cannot be parse';
         }
@@ -106,12 +105,29 @@ var arr = [["a", 1, true], ["b", 2, false]]
 Kết quả
 [["a", "b"], [1, 2], [true, false]]
  */
-function concatArray(array1, array2){
-    arrayHelper(array1);
-    arrayHelper(array2);
+function groupByType(array){
+    const arr = parseJSONInput(array);
+    let result = [[], [], []];
+
+    arr.forEach(group =>{
+        group.forEach(item =>{
+             if(typeof item === "string"){
+                result[0].push(item);
+            }
+            else if(typeof item === "number"){
+                result[1].push(item);
+            }
+            else if(typeof item === "boolean"){
+                result[2].push(item);
+            }
+        });
+    });
+
+    return result;
 }
 /* 
 Bài 4
 Dựa vào hình ảnh giao diện sau, 
 hãy thiết kế 1 mảng phù hợp và thực hiện đổ dữ liệu lên giao diện 
 */
+function 
