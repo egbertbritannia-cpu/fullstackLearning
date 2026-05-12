@@ -133,18 +133,18 @@ hãy thiết kế 1 mảng phù hợp và thực hiện đổ dữ liệu lên g
 const posts = [
   {
     title: "Tiêu đề bài viết 1",
-    image: "../imgs/ig-ben-lock.jpg",
-    desc: "Lorem ipsum dolor sit amet..."
+    image: "../imgs/big-ben-lock.jpg",
+    desc: "Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet"
   },
   {
     title: "Tiêu đề bài viết 2",
-    image: "../imgs/ig-ben-lock.jpg",
-    desc: "Lorem ipsum dolor sit amet..."
+    image: "../imgs/big-ben-lock.jpg",
+    desc: "Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet"
   },
   {
     title: "Tiêu đề bài viết 3",
-    image: "../imgs/ig-ben-lock.jpg",
-    desc: "Lorem ipsum dolor sit amet..."
+    image: "../imgs/big-ben-lock.jpg",
+    desc: "Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet"
   }
 ];
 
