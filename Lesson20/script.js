@@ -5,8 +5,8 @@ document.getElementById('btn-intersection')
 document.getElementById('btn-flatten')
         .addEventListener('click', handleFlatten);
 
-document.getElementById('btn-concat')
-        .addEventListener('click', handleConcat);
+document.getElementById('btn-group-by-type')
+        .addEventListener('click', handleGroupByType);
 
 function getInputValue(id){
     return document.getElementById(id)?.value ?? '';
@@ -26,9 +26,9 @@ function handleFlatten(){
 }
 
 function handleGroupByType(){ 
-    const array = getInputValue('concat-a1');
+    const array = getInputValue('group-by-type');
     const result = groupByType(array);
-    displayResult(result, 'output-concat');
+    displayResult(result, 'output-group-by-type');
 }
 
 //render
@@ -108,7 +108,7 @@ Kết quả
 function groupByType(array){
     const arr = parseJSONInput(array);
     let result = [[], [], []];
-
+    if(!Array.isArray(arr)) return 'Invalid input';
     arr.forEach(group =>{
         group.forEach(item =>{
              if(typeof item === "string"){
@@ -130,4 +130,43 @@ Bài 4
 Dựa vào hình ảnh giao diện sau, 
 hãy thiết kế 1 mảng phù hợp và thực hiện đổ dữ liệu lên giao diện 
 */
-function 
+const posts = [
+  {
+    title: "Tiêu đề bài viết 1",
+    image: "../imgs/ig-ben-lock.jpg",
+    desc: "Lorem ipsum dolor sit amet..."
+  },
+  {
+    title: "Tiêu đề bài viết 2",
+    image: "../imgs/ig-ben-lock.jpg",
+    desc: "Lorem ipsum dolor sit amet..."
+  },
+  {
+    title: "Tiêu đề bài viết 3",
+    image: "../imgs/ig-ben-lock.jpg",
+    desc: "Lorem ipsum dolor sit amet..."
+  }
+];
+
+function renderPosts() {
+    const container = document.getElementById("post-list");
+
+    let html = '';
+
+    posts.forEach((post, index) => {
+        html += `
+            <div class="post ${index % 2 !== 0 ? 'reverse' : ''}">
+                <img src="${post.image}" alt="${post.title}">
+                
+                <div class="content">
+                    <h2>${post.title}</h2>
+                    <p>${post.desc}</p>
+                </div>
+            </div>
+        `;
+    });
+
+    container.innerHTML = html;
+}
+
+window.addEventListener('DOMContentLoaded', renderPosts);

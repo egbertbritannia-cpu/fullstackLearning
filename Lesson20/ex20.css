@@ -65,3 +65,21 @@ button:active{
     transform:scale(0.97);
 }
  
+.post{
+    display:flex;
+    gap:30px;
+    margin:40px 0;
+    align-items:center;
+}
+
+.post.reverse{
+    flex-direction: row-reverse;
+}
+
+.post img{
+    width:300px;
+}
+
+.content{
+    flex:1;
+}
